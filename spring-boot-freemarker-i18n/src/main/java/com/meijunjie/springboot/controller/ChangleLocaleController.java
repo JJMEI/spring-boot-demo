@@ -1,12 +1,12 @@
 package com.meijunjie.springboot.controller;
 
+import com.meijunjie.springboot.common.JsonResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 import javax.servlet.http.HttpSession;
-import java.io.Serializable;
 import java.util.Locale;
 
 /**
@@ -36,19 +36,9 @@ public class ChangleLocaleController {
             }
         }
 
-        return new JsonResult();
+        return JsonResult.success(null);
     }
 
 
-    private class JsonResult implements Serializable {
-        private int code = 0;
 
-        public int getCode() {
-            return code;
-        }
-
-        public void setCode(int code) {
-            this.code = code;
-        }
-    }
 }

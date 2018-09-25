@@ -1,8 +1,11 @@
+# 自定义属性
+
 # 定义应用端口，统一编码格式
 server:
   port: 8089
   tomcat:
     uri-encoding: UTF-8
+
 
 spring:
   http:
